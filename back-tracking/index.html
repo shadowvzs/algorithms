@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Backtracking - Sudoku Resolver</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/app.css">
+    <script type="module" src="./js/main.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="/">Back</a>
+    </header>
+    <h1 class="title">
+        <center> Backtracking - Sudoku</center>
+    </h1>
+    <div id="root"></div>
+    <center>
+
+        <p class="description">
+
+            <b>Name</b>: Backtracking Algorith
+            <b>Type</b>: Brute force / Depth First Search
+            <b>Description</b>: A backtracking algorithm is a problem-solving algorithm that uses a brute force approach
+            for finding the
+            desired output.
+            The term backtracking suggests that if the current solution is not suitable, then backtrack and try other
+            solutions. Thus, recursion is used in this approach.
+
+            This approach is used to solve problems that have multiple solutions. If you want an optimal solution, you
+            must go for dynamic programming.
+
+            For example, consider the SudoKo solving Problem, we try filling digits one by one. Whenever we find that
+            current digit cannot lead to a solution, we remove it (backtrack) and try next digit. This is better than
+            naive approach (generating all possible combinations of digits and then trying every combination one by one)
+            as it drops a set of permutations whenever it backtracks.
+        </p>
+    </center>
+</body>
+
+</html>

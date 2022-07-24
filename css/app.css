@@ -1,0 +1,134 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    list-style: none;
+}
+
+#root {
+    width: 100%;
+    height: 100%;
+}
+
+input[type="radio"] {
+    margin: 0 4px;
+    cursor: pointer;
+}
+
+label.input-wrapper {
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+section.main-page {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-areas: "header"
+        "aside"
+        "main"
+        "footer";
+    grid-template-rows: 50px auto 1fr 30px;
+    grid-template-columns: 1fr;
+}
+
+header.main-header {
+    grid-area: header;
+    padding: 8px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+}
+
+header.main-header p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+footer.main-footer {
+    grid-area: footer;
+    padding: 8px;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main.main-content {
+    grid-area: main;
+    padding: 8px;
+    overflow: auto;
+}
+
+aside.main-aside {
+    grid-area: aside;
+    padding: 8px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+}
+
+aside.main-aside>h3 {
+    margin-top: 6px;
+    padding: 0 8px;
+}
+
+aside.main-aside>hr {
+    margin: 16px 0;
+}
+
+aside.main-aside>nav a {
+    display: block;
+    padding: 4px 8px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+main.main-content h2 {
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+main.main-content p {
+    white-space: pre-wrap;
+}
+
+@media (min-width: 578px) {
+    section.main-page {
+        grid-template-areas: "header header"
+            "aside  main"
+            "footer  footer";
+        grid-template-rows: 50px 1fr 30px;
+        grid-template-columns: 320px 1fr;
+    }
+
+    aside.main-aside {
+        border-right: 1px solid rgba(0, 0, 0, 0.2);
+        border-bottom: none;
+    }
+
+    aside.main-aside .filter-toggle {
+        display: none;
+    }
+
+    li.item {
+        margin: 4px;
+    }
+
+    .equipment-area {
+        display: block;
+    }
+}
