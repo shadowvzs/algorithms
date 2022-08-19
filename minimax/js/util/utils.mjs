@@ -1,0 +1,1 @@
+export const delayPromise = (delay) => new Promise(res => { setTimeout(res, delay); });
